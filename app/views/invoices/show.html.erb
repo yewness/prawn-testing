@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice no:</strong>
+  <%= @invoice.invoice_no %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @invoice.name %>
+</p>
+
+<p>
+  <strong>Payment mode:</strong>
+  <%= @invoice.payment_mode %>
+</p>
+
+<p>
+  <strong>Bank detail:</strong>
+  <%= @invoice.bank_detail %>
+</p>
+
+<%= link_to 'Generate PDF', invoice_path(@invoice, format: :pdf) %> |
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>
