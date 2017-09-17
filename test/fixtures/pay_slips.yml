@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  slip_no: MyString
+  name: MyString
+  income: MyString
+
+two:
+  slip_no: MyString
+  name: MyString
+  income: MyString

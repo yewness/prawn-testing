@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917160805) do
+ActiveRecord::Schema.define(version: 20170917162643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20170917160805) do
     t.string "name"
     t.string "payment_mode"
     t.string "bank_detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pay_slips", force: :cascade do |t|
+    t.string "slip_no"
+    t.string "name"
+    t.string "income"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

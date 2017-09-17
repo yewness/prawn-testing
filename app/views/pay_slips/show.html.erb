@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Slip no:</strong>
+  <%= @pay_slip.slip_no %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pay_slip.name %>
+</p>
+
+<p>
+  <strong>Income:</strong>
+  <%= @pay_slip.income %>
+</p>
+
+<%= link_to 'Generate PDF', pay_slip_path(@pay_slip, format: :pdf) %> |
+<%= link_to 'Edit', edit_pay_slip_path(@pay_slip) %> |
+<%= link_to 'Back', pay_slips_path %>

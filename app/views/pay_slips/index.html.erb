@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pay Slips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Slip no</th>
+      <th>Name</th>
+      <th>Income</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pay_slips.each do |pay_slip| %>
+      <tr>
+        <td><%= pay_slip.slip_no %></td>
+        <td><%= pay_slip.name %></td>
+        <td><%= pay_slip.income %></td>
+        <td><%= link_to 'Show', pay_slip %></td>
+        <td><%= link_to 'Edit', edit_pay_slip_path(pay_slip) %></td>
+        <td><%= link_to 'Destroy', pay_slip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pay Slip', new_pay_slip_path %>
